@@ -1,5 +1,7 @@
 {
-	"ServerName": "appetite",
-	"ServerAdmin": "app",
-	"ServerPassword": "Admin12£"
+	"Server": {
+		"Name":"appetite",
+		"Admin": "app",
+		"Password": "Admin12£"
+	}
 }
