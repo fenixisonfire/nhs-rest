@@ -26,7 +26,20 @@ if($conn == false) {
 
 //$result = $conn->query("SELECT CompanyName, City, Country FROM Customers");
 
-$outp = "Connection succeeded";
+$query = "SELECT * FROM users";
+$result = sqlsrv_query($conn, $query) or die("Query to check login authentication failed");
+if (!$result) {
+    die("Database query failed!");
+}
+
+$outp = "";
+while( $row = sqlsrv_fetch_array( $result, SQLSRV_FETCH_ASSOC) ) {
+    if ($outp != "") {
+        $outp .= ",";
+    }
+    $outp .= '{"Username":"'  . $rs["username"] . '",';
+    $outp .= '"Password":"'   . $rs["password"]        . '"}';
+}
 /*
 while($rs = $result->fetch_array(MYSQLI_ASSOC)) {
     if ($outp != "") {$outp .= ",";}
