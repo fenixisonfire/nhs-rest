@@ -2,6 +2,14 @@
 header("Access-Control-Allow-Origin: *");
 header("Content-Type: application/json; charset=UTF-8");
 
+
+$postdata = file_get_contents("php://input");
+$request = json_decode($postdata);
+@$username = $request->username;
+@$pass = $request->pass;
+echo $username;
+
+
 // REST import
 $RESTstring = file_get_contents('http://nhs-json.azurewebsites.net');
 $RESTarray = explode(':::',$RESTstring);
@@ -25,7 +33,7 @@ if($conn == false) {
 //$conn = new mysqli("myServer", "myUser", "myPassword", "Northwind");
 
 //$result = $conn->query("SELECT CompanyName, City, Country FROM Customers");
-
+/*
 $query = "SELECT * FROM users";
 $result = sqlsrv_query($conn, $query) or die("Query to check login authentication failed");
 if (!$result) {
@@ -40,18 +48,16 @@ while( $row = sqlsrv_fetch_array( $result, SQLSRV_FETCH_ASSOC) ) {
     $outp .= '{"Username":"' . $row["username"] . '",';
     $outp .= '"Password":"' . $row["password"] . '"}';
 }
-/*
-while($rs = $result->fetch_array(MYSQLI_ASSOC)) {
-    if ($outp != "") {$outp .= ",";}
-    $outp .= '{"Name":"'  . $rs["CompanyName"] . '",';
-    $outp .= '"City":"'   . $rs["City"]        . '",';
-    $outp .= '"Country":"'. $rs["Country"]     . '"}'; 
-}
-*/
 echo($outp);
-
 $outp ='{"records":['.$outp.']}';
 //$conn->close();
-
 echo($outp);
+*/
+/*
+$postdata = file_get_contents("php://input");
+$request = json_decode($postdata);
+$user = $request->username;
+$pass = $request->password;
+$pass = sha1('gf35!&'.$pass.'cg*l');
+*/
 ?>
