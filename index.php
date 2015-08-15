@@ -47,8 +47,9 @@ while($rs = $result->fetch_array(MYSQLI_ASSOC)) {
     $outp .= '"City":"'   . $rs["City"]        . '",';
     $outp .= '"Country":"'. $rs["Country"]     . '"}'; 
 }
+*/
 $outp ='{"records":['.$outp.']}';
 $conn->close();
-*/
+
 echo($outp);
 ?>
