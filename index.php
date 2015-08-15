@@ -51,7 +51,7 @@ while($rs = $result->fetch_array(MYSQLI_ASSOC)) {
 echo($outp);
 
 $outp ='{"records":['.$outp.']}';
-$conn->close();
+//$conn->close();
 
 echo($outp);
 ?>
