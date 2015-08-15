@@ -37,8 +37,8 @@ while( $row = sqlsrv_fetch_array( $result, SQLSRV_FETCH_ASSOC) ) {
     if ($outp != "") {
         $outp .= ",";
     }
-    $outp .= '{"Username":"'  . $rs["username"] . '",';
-    $outp .= '"Password":"'   . $rs["password"]        . '"}';
+    $outp .= '{"Username":"'  . $row["username"] . '",';
+    $outp .= '"Password":"'   . $row["password"]        . '"}';
 }
 /*
 while($rs = $result->fetch_array(MYSQLI_ASSOC)) {
