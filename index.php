@@ -2,7 +2,7 @@
 header("Access-Control-Allow-Origin: *");
 header("Content-Type: application/json; charset=UTF-8");
 
-/*// REST import
+// REST import
 $RESTstring = file_get_contents('http://nhs-json.azurewebsites.net');
 $RESTarray = explode(':::',$RESTstring);
 
@@ -20,13 +20,14 @@ $conn = sqlsrv_connect($server, $connectionOptions);
 if($conn == false) {
     echo 'Connection failed. ';
     die(print_r(sqlsrv_errors(), true));
-}*/
+}
 
-$conn = new mysqli("myServer", "myUser", "myPassword", "Northwind");
+//$conn = new mysqli("myServer", "myUser", "myPassword", "Northwind");
 
-$result = $conn->query("SELECT CompanyName, City, Country FROM Customers");
+//$result = $conn->query("SELECT CompanyName, City, Country FROM Customers");
 
-$outp = "";
+$outp = "Connection succeeded";
+/*
 while($rs = $result->fetch_array(MYSQLI_ASSOC)) {
     if ($outp != "") {$outp .= ",";}
     $outp .= '{"Name":"'  . $rs["CompanyName"] . '",';
@@ -35,6 +36,6 @@ while($rs = $result->fetch_array(MYSQLI_ASSOC)) {
 }
 $outp ='{"records":['.$outp.']}';
 $conn->close();
-
+*/
 echo($outp);
 ?>
