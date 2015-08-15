@@ -37,8 +37,8 @@ while( $row = sqlsrv_fetch_array( $result, SQLSRV_FETCH_ASSOC) ) {
     if ($outp != "") {
         $outp .= ",";
     }
-    $outp .= '{"Username":"'  . $row["username"] . '",';
-    $outp .= '"Password":"'   . $row["password"]        . '"}';
+    $outp .= '{"Username":"' . $row["username"] . '",';
+    $outp .= '"Password":"' . $row["password"] . '"}';
 }
 /*
 while($rs = $result->fetch_array(MYSQLI_ASSOC)) {
@@ -48,6 +48,8 @@ while($rs = $result->fetch_array(MYSQLI_ASSOC)) {
     $outp .= '"Country":"'. $rs["Country"]     . '"}'; 
 }
 */
+echo($outp);
+
 $outp ='{"records":['.$outp.']}';
 $conn->close();
 
