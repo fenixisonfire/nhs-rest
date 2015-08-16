@@ -41,4 +41,5 @@ if ($server === "details") {
     $jsonstring = json_encode($json);
     echo $jsonstring;
 }
+echo "test";
 ?>
