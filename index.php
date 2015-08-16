@@ -5,11 +5,11 @@ header("Access-Control-Allow-Origin: *");
 
 $postdata = file_get_contents("php://input");
 $request = json_decode($postdata);
-@$username = $request->username;
-@$pass = $request->pass;
+$username = $request->username;
+$pass = $request->pass;
 echo $username;
 
-
+/*
 // REST import
 $RESTstring = file_get_contents('http://nhs-json.azurewebsites.net');
 $RESTarray = explode(':::',$RESTstring);
@@ -29,7 +29,7 @@ if($conn == false) {
     echo 'Connection failed. ';
     die(print_r(sqlsrv_errors(), true));
 }
-
+*/
 //$conn = new mysqli("myServer", "myUser", "myPassword", "Northwind");
 
 //$result = $conn->query("SELECT CompanyName, City, Country FROM Customers");
