@@ -1,11 +1,10 @@
 <?php
+header("Access-Control-Allow-Origin: *");
 // Server account details
 $serverName = "appetite";
 $serverAdmin = "app";
 $serverPassword = "Admin12£";
 
-
-header("Access-Control-Allow-Origin: *");
 
 // Receives POST request
 $postdata = file_get_contents("php://input");
