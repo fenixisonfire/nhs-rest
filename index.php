@@ -14,11 +14,11 @@ $server = $request->server;
 
 // Checks if the POST request is correct, then returns a JSON string
 if ($server === "details") {
-    $json   = array();
-    $json[] = array(
-        'name'      => $serverName,
-        'admin'     => $serverAdmin,
-        'password'  => $serverPassword
+//    $json   = array();
+    $json = array(
+        'name' => $serverName,
+        'admin' => $serverAdmin,
+        'password' => $serverPassword
     );
 
     // Converts the array to a JSON string
