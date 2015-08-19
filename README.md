@@ -14,16 +14,16 @@ It is imperative that the triple colon notation (:::) is maintained on both side
 
 ## Example
 ### Current configuration
-ServerName:::testserver:::
-ServerAdmin:::admin:::
-ServerPassword:::password:::
+ServerName:::testserver:::  
+ServerAdmin:::admin:::  
+ServerPassword:::password:::  
 
 ### New data
-New server name = testserver2
-New server admin = admin
-New server password = password123
+New server name = testserver2  
+New server admin = admin  
+New server password = password123  
 
 ### New configuration
-ServerName:::testserver2:::
-ServerAdmin:::admin:::
-ServerPassword:::password123:::
+ServerName:::testserver2:::  
+ServerAdmin:::admin:::  
+ServerPassword:::password123:::  
