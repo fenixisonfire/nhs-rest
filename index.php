@@ -1,7 +1,7 @@
 <?php
 header("Access-Control-Allow-Origin: *");
 // Server account details
-$serverName = "a5kkowq9mr";
+$serverName = "appetitetemp1";
 $serverAdmin = "cesarfelix";
 $serverPassword = "admin12£";
 
