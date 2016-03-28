@@ -1,9 +1,9 @@
 <?php
 header("Access-Control-Allow-Origin: *");
 // Server account details
-$serverName = "uclappetite";
+$serverName = "appetiteproject";
 $serverAdmin = "cesarfelix";
-$serverPassword = "cesar&FELIX4appetite";
+$serverPassword = "cesar&FELIX4";
 
 
 // Receives POST request
