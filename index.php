@@ -3,7 +3,7 @@ header("Access-Control-Allow-Origin: *");
 // Server account details
 $serverName = "appetiteproject";
 $serverAdmin = "cesarfelix";
-$serverPassword = "cesar&FELIX4";
+$serverPassword = "cesar&FELIX4iiiii";
 
 
 // Receives POST request
